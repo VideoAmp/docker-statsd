@@ -5,7 +5,7 @@
     port: parseInt(process.env.STATSD_PORT) || 8125,
     kafkaES: {
       conn:          process.env.KAFKA_CONNECTION || "localhost:2181/",
-      topic:         process.env.KAFKA_TOPIC || "dev.null",
+      topic:         process.env.KAFKA_TOPIC || "stats",
       countType:     "counter",
       timerType:     "timer",
       timerDataType: "timer_data",
