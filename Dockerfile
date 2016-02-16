@@ -7,9 +7,9 @@ run     yum -y install wget git python gcc gcc-c++ make snappy
 run     wget -O /tmp/node-v5.0.0-linux-x64.tar.gz https://nodejs.org/dist/v5.0.0/node-v5.0.0-linux-x64.tar.gz
 run     tar -C /usr/local/ --strip-components=1 -zxvf /tmp/node-v5.0.0-linux-x64.tar.gz
 run     rm /tmp/node-v5.0.0-linux-x64.tar.gz
-run     git clone git://github.com/etsy/statsd.git statsd
+run     git clone git://github.com/etsy/statsd.git#v0.7.2 statsd
 workdir statsd
-run     npm install git://github.com/VideoAmp/statsd-kafka-es-backend.git
+run     npm install git://github.com/VideoAmp/statsd-kafka-es-backend.git#1.0.1
 workdir /
 add     ./config.js ./statsd/config.js
 
